@@ -1,0 +1,212 @@
+/*@charset "UTF-8"*/
+
+/*
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa886
+#063d1e
+*/
+
+/*Definir variáveis em CSS na root*/
+
+@font-face{
+font-family: 'Android';
+src: url('../fontes/idroid.otf') format('opentype');
+font-weight: normal;
+
+}
+
+:root{
+
+   --cor1: #c5ebd6;
+   --cor2: #83e1ad;
+   --cor3: #3ddc84;
+   --cor4: #14663d;
+   --cor5: #063d1e;
+
+   --fonte-padrao: Arial, verdana, helvetica, sans-serif;
+   ;
+  /* --fonte-destaque: 'Bebas Neue', cursive;*/
+    --font-android: 'Android', cursive;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:#c5ebd6;  
+}
+
+a.externo::after{
+   content: '\00A0\1F517'; /*Insere o ícone depois do link*/
+}
+
+header{
+    background-color: var(--cor4);
+    min-height: 95px;/*Altura do cabeçalho*/ 
+    text-align: center;   
+    padding-top: 35px;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+}
+
+ header > h1{
+   font-size: 25px;
+    font-family: var(--fonte-padrao);
+    color:white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);
+ }
+
+
+ header > p{
+   font-family: var(--fonte-padrao);
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);
+ }
+ 
+ nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.24);
+    transition-duration: 0.5s;
+   
+    
+ }
+ nav > a{
+   font-family: var(--fonte-padrao);
+   font-weight: bold;
+   color: white;
+   text-decoration: none;
+   padding: 10px;
+   border-radius: 5px;
+
+ }
+
+ nav > a:hover{
+   background-color: var(--cor4);
+   color: var(--cor5);
+ }
+ main{
+   min-width: 300px; /*Informa a largura mínima da tela*/
+   max-width: 800px;/*Informa a largura máxima da tela*/
+   margin: auto; /*Centraliza o conteudo do site na tela*/
+   background-color: white;
+   padding: 20px;
+   margin-bottom: 10px;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
+
+ }
+ main p {
+   margin: 15px 0px;
+   text-align: justify;
+   text-indent: 30px;
+   font-size: 1em;
+   line-height: 1.5em;
+   font-family: var(--fonte-padrao);
+}
+
+main strong{
+   color: var(--cor4);
+   font-weight: bold;
+  
+}
+
+main a{
+   text-decoration: none;
+   font-weight: bold;
+   background-color: var(--cor2);
+   padding: 2px 6px;
+   color: var(--cor5);
+}
+
+main a:hover{
+   text-decoration: underline;
+   color: var(--cor4);
+}
+ main img.pequena{
+   /*max-width: 350px; (faz com que a imagem não perca o desfoque  aumente em telas maiores)*/
+   width: 35%;/*Faz com que a imagem reduza e aumente consoante as telas*/
+   display: block; /*Bloquear a imagem por não ser definda em padrão como bloco*/
+   margin: auto;/*Centralizar a imagem nas telas*/
+
+ }
+ main h1{
+    color: var(--cor5);
+    font-family: var(--font-android);
+    font-weight: normal;
+ }
+
+ main h2{
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.2em;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    text-indent: 8px;
+    font-weight: normal;
+
+ }
+
+
+ div.video {
+   background-color: var(--cor5);
+   margin: 0px -20px 30px -20px;
+   padding: 20px;
+   padding-bottom: 56.85%;
+   position: relative;
+ }
+
+div.video > iframe{
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   width:90%;
+   height:90%;
+}
+
+ aside{
+   background-color: var(--cor1);
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.301);
+
+ }
+
+ aside > ul {
+   list-style-type: '\2714\00a0\00a0'; /*Pisco a frente dos links (Não disponível em todos Navegadores*/
+   list-style-position: inside;
+   columns: 2;
+   font-family: var(--fonte-padrao);
+ }
+
+ aside h3{
+   font-family: var(--fonte-padrao);
+   background-color: var(--cor4);
+   padding: 10px;
+   color: white;
+   margin: -10px -10px 0px -10px;
+   border-radius: 10px 10px 0px 0px;
+ }
+
+ footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0,8em;
+    padding: 5px;
+    font-family: var(--font-android);
+ }
+
+ footer a{
+   color: white;
+   text-decoration: none;
+ }
+
+ footer a:hover{
+   text-decoration: underline;
+   color: var(--cor3);
+ }
